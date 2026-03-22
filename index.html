@@ -32,7 +32,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-he
 ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
 
 /* ===== NAV ===== */
-nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(4,8,15,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 5%}
+nav{position:relative;top:0;left:0;right:0;z-index:999;background:rgba(4,8,15,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 5%}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
 .nav-logo{font-family:var(--font-head);font-size:1.1rem;color:var(--accent2);letter-spacing:.12em;text-decoration:none}
 .nav-links{display:flex;gap:1.8rem;list-style:none}
@@ -42,7 +42,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(4,8,15,.88);
 .hamburger span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
 
 /* ===== HERO ===== */
-#home{min-height:100vh;display:flex;align-items:center;padding:80px 5% 40px;position:relative;overflow:hidden}
+#home{min-height:100vh;display:flex;align-items:center;padding:40px 5% 40px;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 70% 50%,rgba(30,144,255,.12),transparent),radial-gradient(ellipse 40% 40% at 20% 80%,rgba(0,200,255,.08),transparent)}
 .grid-overlay{position:absolute;inset:0;background-image:linear-gradient(rgba(30,144,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(30,144,255,.04) 1px,transparent 1px);background-size:50px 50px}
 .hero-content{position:relative;z-index:1;max-width:680px}
@@ -177,7 +177,9 @@ footer strong{color:var(--accent2)}
 </style>
 </head>
 <body>
-
+<div style="width:100%;overflow:hidden;line-height:0;">
+  <img src="banner.jpg" alt="Banner" style="width:100%;display:block;object-fit:contain;object-position:top;"/>
+</div>
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
