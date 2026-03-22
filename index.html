@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Sharwari Borkar – Portfolio</title>
+<title>Sharwari Borkar - Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"/>
 <style>
-/* ===== RESET & ROOT ===== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#04080f;
@@ -15,7 +14,6 @@
   --card2:#091529;
   --accent:#1e90ff;
   --accent2:#00c8ff;
-  --accent3:#7b5ea7;
   --text:#cde2ff;
   --text-dim:#7a9cc4;
   --border:#1a3a60;
@@ -25,14 +23,12 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.7;overflow-x:hidden}
-
-/* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar{width:6px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
 
-/* ===== NAV ===== */
-nav{position:relative;top:0;left:0;right:0;z-index:999;background:rgba(4,8,15,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 5%}
+/* NAV */
+nav{position:relative;z-index:999;background:rgba(4,8,15,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 5%}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
 .nav-logo{font-family:var(--font-head);font-size:1.1rem;color:var(--accent2);letter-spacing:.12em;text-decoration:none}
 .nav-links{display:flex;gap:1.8rem;list-style:none}
@@ -41,8 +37,8 @@ nav{position:relative;top:0;left:0;right:0;z-index:999;background:rgba(4,8,15,.8
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .hamburger span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
 
-/* ===== HERO ===== */
-#home{min-height:100vh;display:flex;align-items:center;padding:40px 5% 40px;position:relative;overflow:hidden}
+/* HERO */
+#home{min-height:100vh;display:flex;align-items:center;padding:40px 5%;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 70% 50%,rgba(30,144,255,.12),transparent),radial-gradient(ellipse 40% 40% at 20% 80%,rgba(0,200,255,.08),transparent)}
 .grid-overlay{position:absolute;inset:0;background-image:linear-gradient(rgba(30,144,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(30,144,255,.04) 1px,transparent 1px);background-size:50px 50px}
 .hero-content{position:relative;z-index:1;max-width:680px}
@@ -59,14 +55,14 @@ nav{position:relative;top:0;left:0;right:0;z-index:999;background:rgba(4,8,15,.8
 .hero-orb::after{content:'';position:absolute;inset:20px;border-radius:50%;border:1px solid rgba(0,200,255,.15);animation:pulse 4s ease-in-out infinite .5s}
 @keyframes pulse{0%,100%{transform:translateY(-50%) scale(1);opacity:.7}50%{transform:translateY(-50%) scale(1.04);opacity:1}}
 
-/* ===== SECTIONS COMMON ===== */
+/* SECTIONS */
 section{padding:90px 5%}
 .section-header{text-align:center;margin-bottom:4rem}
 .section-label{font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent2);margin-bottom:.6rem}
 .section-title{font-family:var(--font-head);font-size:clamp(1.5rem,3vw,2.2rem);color:#fff;margin-bottom:1rem}
 .section-line{width:60px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));margin:0 auto}
 
-/* ===== ABOUT ===== */
+/* ABOUT */
 #about{background:var(--surface)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:1000px;margin:0 auto}
 .about-avatar{width:180px;height:180px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:3rem;color:#fff;margin:0 auto;box-shadow:var(--glow)}
@@ -75,19 +71,16 @@ section{padding:90px 5%}
 .about-chips{display:flex;flex-wrap:wrap;gap:.5rem}
 .chip{background:rgba(30,144,255,.12);border:1px solid rgba(30,144,255,.3);color:var(--accent2);padding:.3rem .85rem;border-radius:20px;font-size:.8rem}
 
-/* ===== RESUME ===== */
+/* RESUME */
 #resume{background:var(--bg)}
 .resume-box{max-width:800px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden}
 .resume-toolbar{background:var(--card2);padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem;border-bottom:1px solid var(--border)}
 .resume-toolbar span{font-size:.85rem;color:var(--text-dim)}
 .resume-placeholder{height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;color:var(--text-dim)}
-.resume-placeholder svg{opacity:.3}
-.resume-placeholder p{font-size:.95rem;text-align:center}
 #resume-pdf-container{display:none;width:100%;height:600px}
 #resume-pdf-container iframe{width:100%;height:100%;border:none}
-.upload-hint{background:rgba(30,144,255,.08);border:1px dashed rgba(30,144,255,.3);border-radius:6px;padding:1rem 2rem;font-size:.85rem;text-align:center;color:var(--text-dim)}
 
-/* ===== FABLAB ===== */
+/* FABLAB */
 #fablab{background:var(--surface)}
 .fablab-tabs{display:flex;gap:1rem;justify-content:center;margin-bottom:3rem;flex-wrap:wrap}
 .fab-tab{background:var(--card);border:1px solid var(--border);color:var(--text-dim);padding:.7rem 2rem;border-radius:3px;cursor:pointer;font-family:var(--font-body);font-size:.9rem;letter-spacing:.06em;transition:.25s}
@@ -105,7 +98,7 @@ section{padding:90px 5%}
 .declaration{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.9rem;color:var(--text-dim)}
 .declaration strong{color:var(--accent2)}
 
-/* Modules grid */
+/* Modules */
 .modules-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.2rem;max-width:1000px;margin:0 auto}
 .module-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.5rem 1.2rem;cursor:pointer;transition:.3s;text-align:center;position:relative;overflow:hidden}
 .module-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),var(--accent2));opacity:0;transition:.3s}
@@ -115,7 +108,7 @@ section{padding:90px 5%}
 .module-name{font-family:var(--font-head);font-size:.75rem;letter-spacing:.05em;color:var(--text);position:relative;z-index:1}
 .module-badge{position:absolute;top:.6rem;right:.6rem;background:var(--accent);color:#fff;font-size:.6rem;padding:.15rem .4rem;border-radius:10px}
 
-/* Module detail overlay */
+/* Module detail */
 .module-detail{display:none;max-width:1000px;margin:2rem auto 0}
 .module-detail.active{display:block}
 .detail-header{display:flex;align-items:center;gap:1rem;margin-bottom:2rem}
@@ -142,19 +135,35 @@ section{padding:90px 5%}
 .coming-soon{text-align:center;padding:3rem;color:var(--text-dim);font-size:.9rem}
 .coming-soon span{font-size:2.5rem;display:block;margin-bottom:1rem;opacity:.5}
 
-/* ===== PROJECTS ===== */
+/* Screenshots */
+.screenshots-section{margin-top:1.4rem}
+.screenshots-label{font-size:.85rem;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.8rem;display:block}
+.screenshots-group{margin-bottom:1.2rem}
+.screenshots-group-title{font-size:.78rem;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;display:block}
+.screenshots-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.8rem}
+.screenshot-item{border:1px solid var(--border);border-radius:6px;overflow:hidden;cursor:pointer;transition:.25s;background:var(--card2)}
+.screenshot-item:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--glow)}
+.screenshot-item img{width:100%;display:block;height:180px;object-fit:cover;object-position:top}
+.screenshot-item span{display:block;font-size:.75rem;color:var(--text-dim);padding:.4rem .7rem;text-align:center}
+
+/* Lightbox */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:9999;align-items:center;justify-content:center;padding:1rem}
+.lightbox.open{display:flex}
+.lightbox-img{max-width:92vw;max-height:90vh;border-radius:6px;border:1px solid var(--border)}
+.lightbox-close{position:fixed;top:1rem;right:1.5rem;color:#fff;font-size:2.5rem;cursor:pointer;z-index:10000;line-height:1;background:none;border:none}
+
+/* Projects */
 #projects{background:var(--bg)}
 .projects-empty{text-align:center;padding:4rem;color:var(--text-dim)}
 .projects-empty span{font-size:3rem;display:block;margin-bottom:1.5rem;opacity:.3}
 .projects-empty h3{font-family:var(--font-head);font-size:1rem;color:var(--text-dim);margin-bottom:.5rem}
 
-/* ===== CONTACT ===== */
+/* Contact */
 #contact{background:var(--surface)}
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;max-width:800px;margin:0 auto}
 .contact-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.8rem 1.5rem;display:flex;align-items:center;gap:1.2rem;transition:.3s;text-decoration:none}
 .contact-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:var(--glow)}
 .contact-icon{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.contact-icon.phone{background:rgba(0,255,150,.1);border:1px solid rgba(0,255,150,.3)}
 .contact-icon.email{background:rgba(255,100,50,.1);border:1px solid rgba(255,100,50,.3)}
 .contact-icon.linkedin{background:rgba(0,119,181,.15);border:1px solid rgba(0,119,181,.4)}
 .contact-icon.github{background:rgba(200,200,200,.08);border:1px solid rgba(200,200,200,.2)}
@@ -162,11 +171,11 @@ section{padding:90px 5%}
 .contact-info small{display:block;font-size:.72rem;color:var(--text-dim);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.2rem}
 .contact-info span{font-size:.9rem;color:var(--text)}
 
-/* ===== FOOTER ===== */
+/* Footer */
 footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem 5%;text-align:center;font-size:.82rem;color:var(--text-dim)}
 footer strong{color:var(--accent2)}
 
-/* ===== RESPONSIVE ===== */
+/* Responsive */
 @media(max-width:768px){
   .about-grid{grid-template-columns:1fr;text-align:center}
   .hero-orb{display:none}
@@ -177,9 +186,12 @@ footer strong{color:var(--accent2)}
 </style>
 </head>
 <body>
+
+<!-- BANNER -->
 <div style="width:100%;overflow:hidden;line-height:0;">
   <img src="banner.jpg" alt="Banner" style="width:100%;display:block;object-fit:contain;object-position:top;"/>
 </div>
+
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
@@ -252,12 +264,12 @@ footer strong{color:var(--accent2)}
   </div>
   <div class="resume-box">
     <div class="resume-toolbar">
-      <span>📄 Sharwari_Borkar_Resume.pdf</span>
-      <a id="resumeDownload" href="#" class="btn-outline" style="font-size:.78rem;padding:.3rem .9rem;margin-left:auto;display:none" download>⬇ Download</a>
+      <span>Sharwari_Borkar_Resume.pdf</span>
+      <a id="resumeDownload" href="#" class="btn-outline" style="font-size:.78rem;padding:.3rem .9rem;margin-left:auto;display:none" download>Download</a>
     </div>
     <div id="resumePlaceholder" class="resume-placeholder">
       <p style="font-size:1rem;color:var(--text-dim);margin-bottom:1.5rem">Click the button below to view my resume</p>
-      <button class="btn-primary" onclick="openResume()" style="font-size:1rem;padding:.8rem 2.5rem;cursor:pointer">📄 View Resume</button>
+      <button class="btn-primary" onclick="openResume()" style="font-size:1rem;padding:.8rem 2.5rem;cursor:pointer">View Resume</button>
     </div>
     <div id="resume-pdf-container">
       <iframe id="resumeFrame" title="Resume"></iframe>
@@ -273,18 +285,16 @@ footer strong{color:var(--accent2)}
     <div class="section-line"></div>
   </div>
   <div class="fablab-tabs">
-    <button class="fab-tab active" onclick="switchFabTab('modules',this)">🔧 Modules</button>
-    <button class="fab-tab" onclick="switchFabTab('agreement',this)">📜 FabLab Student Agreement</button>
+    <button class="fab-tab active" onclick="switchFabTab('modules',this)">Modules</button>
+    <button class="fab-tab" onclick="switchFabTab('agreement',this)">FabLab Student Agreement</button>
   </div>
 
   <!-- MODULES PANEL -->
   <div class="fab-panel active" id="fab-modules">
-    <div class="modules-grid" id="modulesGrid">
-      <!-- Module cards injected by JS -->
-    </div>
+    <div class="modules-grid" id="modulesGrid"></div>
     <div class="module-detail" id="moduleDetail">
       <div class="detail-header">
-        <button class="back-btn" onclick="closeModule()">← Back to Modules</button>
+        <button class="back-btn" onclick="closeModule()">Back to Modules</button>
         <h2 class="detail-title" id="detailTitle"></h2>
       </div>
       <div id="detailContent"></div>
@@ -294,10 +304,9 @@ footer strong{color:var(--accent2)}
   <!-- AGREEMENT PANEL -->
   <div class="fab-panel" id="fab-agreement">
     <div class="agreement-box">
-      <h2>📜 FabLab Student Agreement</h2>
-      <p style="color:var(--text-dim);font-size:.92rem">The FabLab, SSGMCE is responsible for managing the digital fabrication learning environment. Below outlines mutual responsibilities between the FabLab and its students.</p>
-
-      <h3>🏫 The FabLab, SSGMCE is responsible for:</h3>
+      <h2>FabLab Student Agreement</h2>
+      <p style="color:var(--text-dim);font-size:.92rem">The FabLab, SSGMCE is responsible for managing the digital fabrication learning environment.</p>
+      <h3>The FabLab, SSGMCE is responsible for:</h3>
       <ul>
         <li>Teaching principles and practices of digital fabrication</li>
         <li>Arranging lectures, recitations, meetings, and events for the class</li>
@@ -311,8 +320,7 @@ footer strong{color:var(--accent2)}
         <li>Managing and reporting on the program's finances, results, and impacts</li>
         <li>Publicizing the program</li>
       </ul>
-
-      <h3>🎓 I am a FabLab, SSGMCE student, responsible for:</h3>
+      <h3>I am a FabLab, SSGMCE student, responsible for:</h3>
       <ul>
         <li>Attending class lectures and participating in reviews</li>
         <li>Developing and documenting projects assigned to introduce and demonstrate skills</li>
@@ -324,9 +332,8 @@ footer strong{color:var(--accent2)}
         <li>Following locally applicable health and safety guidance</li>
         <li>Promoting a respectful environment free of harassment and discrimination</li>
       </ul>
-
       <div class="declaration">
-        <strong>✍️ Declaration</strong>
+        <strong>Declaration</strong>
         <p style="margin-top:.6rem">Signed by committing this file in my repository.</p>
         <p style="margin-top:.4rem"><strong>Name:</strong> Sharwari Purushottam Borkar</p>
       </div>
@@ -356,13 +363,13 @@ footer strong{color:var(--accent2)}
     <div class="section-line"></div>
   </div>
   <div class="contact-grid">
-    <a href="mailto:borkarsharwari66@gmail.com" class="contact-card">
+    <a href="mailto:youremail@gmail.com" class="contact-card">
       <div class="contact-icon email">
         <svg viewBox="0 0 24 24" fill="none" stroke="#ff6432" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </div>
       <div class="contact-info">
         <small>Email</small>
-        <span>Email</span>
+        <span>youremail@gmail.com</span>
       </div>
     </a>
     <a href="https://www.linkedin.com/in/sharwari-borkar-7921b9384/" target="_blank" class="contact-card">
@@ -380,57 +387,69 @@ footer strong{color:var(--accent2)}
       </div>
       <div class="contact-info">
         <small>GitHub</small>
-        <span>Sharwari Borkar</span>
+        <span>SharwariBorkar21</span>
       </div>
     </a>
   </div>
 </section>
 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="Screenshot"/>
+</div>
+
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 <strong>Sharwari Purushottam Borkar</strong> · IT Student, SSGMCE Shegaon · All rights reserved.</p>
+  <p>&#169; 2026 <strong>Sharwari Purushottam Borkar</strong> &middot; IT Student, SSGMCE Shegaon &middot; All rights reserved.</p>
 </footer>
 
 <script>
-/* ===== NAV ===== */
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
-// Active nav on scroll
-const sections = document.querySelectorAll('section');
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-  });
-});
-
-/* ===== RESUME UPLOAD ===== */
-function loadResume(input) {
-  const file = input.files[0];
-  if (!file) return;
-  const url = URL.createObjectURL(file);
-  document.getElementById('resumeFrame').src = url;
-  document.getElementById('resumePlaceholder').style.display = 'none';
-  const container = document.getElementById('resume-pdf-container');
-  container.style.display = 'block';
-  const dl = document.getElementById('resumeDownload');
-  dl.href = url; dl.style.display = 'inline-block';
+/* NAV */
+var hamburger = document.getElementById('hamburger');
+var navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', function() { navLinks.classList.toggle('open'); });
+var navItems = navLinks.querySelectorAll('a');
+for (var i = 0; i < navItems.length; i++) {
+  navItems[i].addEventListener('click', function() { navLinks.classList.remove('open'); });
 }
 
-/* ===== FABLAB TABS ===== */
+window.addEventListener('scroll', function() {
+  var current = '';
+  var secs = document.querySelectorAll('section');
+  for (var i = 0; i < secs.length; i++) {
+    if (window.scrollY >= secs[i].offsetTop - 120) current = secs[i].id;
+  }
+  var links = navLinks.querySelectorAll('a');
+  for (var j = 0; j < links.length; j++) {
+    if (links[j].getAttribute('href') === '#' + current) {
+      links[j].classList.add('active');
+    } else {
+      links[j].classList.remove('active');
+    }
+  }
+});
+
+/* RESUME */
+function openResume() {
+  document.getElementById('resumeFrame').src = 'resume.pdf';
+  document.getElementById('resumePlaceholder').style.display = 'none';
+  document.getElementById('resume-pdf-container').style.display = 'block';
+  document.getElementById('resumeDownload').style.display = 'inline-block';
+}
+
+/* FABLAB TABS */
 function switchFabTab(tab, btn) {
-  document.querySelectorAll('.fab-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.fab-panel').forEach(p => p.classList.remove('active'));
+  var tabs = document.querySelectorAll('.fab-tab');
+  var panels = document.querySelectorAll('.fab-panel');
+  for (var i = 0; i < tabs.length; i++) tabs[i].classList.remove('active');
+  for (var i = 0; i < panels.length; i++) panels[i].classList.remove('active');
   btn.classList.add('active');
   document.getElementById('fab-' + tab).classList.add('active');
 }
 
-/* ===== MODULES DATA ===== */
-const modules = [
+/* MODULES DATA */
+var modules = [
   { id:'web', name:'Web Development', icon:'🌐', badge:'7 Days', hasDays:true },
   { id:'uiux', name:'UI/UX Design', icon:'🎨', hasDays:false },
   { id:'cad', name:'Computer Aided Designing', icon:'📐', hasDays:false },
@@ -440,141 +459,191 @@ const modules = [
   { id:'iot', name:'IoT & Embedded System', icon:'📡', hasDays:false },
   { id:'java', name:'Java', icon:'☕', hasDays:false },
   { id:'net', name:'Networking', icon:'🔗', hasDays:false },
-  { id:'aiml', name:'AI & ML', icon:'🤖', hasDays:false },
+  { id:'aiml', name:'AI & ML', icon:'🤖', hasDays:false }
 ];
 
-const webDays = [
+var webDays = [
   {
-    day:1, title:'Day 1 – Basic HTML Tags',
+    day:1,
+    title:'Day 1 - Basic HTML Tags',
     desc:'Learn the foundation of web development by understanding basic HTML structure and commonly used tags for formatting text.',
     sections:[
-      { label:'HTML Tags Covered', type:'tags', items:['&lt;html&gt;','&lt;head&gt;','&lt;title&gt;','&lt;body&gt;','&lt;p&gt;','&lt;b&gt;','&lt;i&gt;','&lt;u&gt;','&lt;br&gt;','&lt;hr&gt;','&lt;marquee&gt;'] },
+      { label:'HTML Tags Covered', items:['html','head','title','body','p','b','i','u','br','hr','marquee'] }
     ],
-    extra:`<div class="info-box">
-      <strong>📌 Extra Info:</strong><br/>
-      HTML (HyperText Markup Language) is the skeleton of every webpage. Tags are enclosed in angle brackets <code>&lt; &gt;</code>. Most tags have an opening <code>&lt;tag&gt;</code> and a closing <code>&lt;/tag&gt;</code>. Attributes add extra info inside the opening tag (e.g., <code>class</code>, <code>id</code>, <code>style</code>). The <code>&lt;!DOCTYPE html&gt;</code> declaration at the top tells the browser you're using HTML5. Semantic HTML improves accessibility and SEO — use tags for their meaning, not just appearance.
-    </div>`
+    extra:'Learn the foundation of web. HTML is the skeleton of every webpage. Tags are enclosed in angle brackets. The DOCTYPE declaration tells the browser you are using HTML5. Semantic HTML improves accessibility and SEO.',
+    screenshots:[
+      { group:'Input (Code)', files:[{src:'day1-input.png',label:'Day 1 - HTML Code'}] },
+      { group:'Output (Browser)', files:[{src:'day1-output.png',label:'Day 1 - Browser Output'}] }
+    ]
   },
   {
-    day:2, title:'Day 2 – Media & Tables',
+    day:2,
+    title:'Day 2 - Media and Tables',
     desc:'Learn how to add multimedia elements and create structured data using tables.',
     sections:[
-      { label:'HTML Tags Covered', type:'tags', items:['&lt;img&gt;','&lt;a&gt;','&lt;video&gt;','&lt;audio&gt;','&lt;table&gt;','&lt;tr&gt;','&lt;th&gt;','&lt;td&gt;','&lt;caption&gt;','&lt;thead&gt;','&lt;tbody&gt;','&lt;tfoot&gt;'] },
+      { label:'HTML Tags Covered', items:['img','a','video','audio','table','tr','th','td','caption','thead','tbody','tfoot'] }
     ],
-    extra:`<div class="info-box">
-      <strong>📌 Extra Info:</strong><br/>
-      The <code>src</code> attribute specifies the source for media elements. Always add <code>alt</code> to <code>&lt;img&gt;</code> for accessibility. Anchor tags can link to external sites (absolute URLs), same-page sections (using <code>#id</code>), or open in new tabs via <code>target="_blank"</code>. Tables should only be used for tabular data, not layout. The <code>colspan</code> and <code>rowspan</code> attributes allow cells to span multiple columns/rows. Use <code>border-collapse: collapse</code> in CSS for clean table borders.
-    </div>`
+    extra:'The src attribute specifies the source for media. Always add alt to img for accessibility. Anchor tags can link to external sites or same-page sections. Tables should only be used for tabular data. Use border-collapse collapse in CSS for clean borders.',
+    screenshots:[
+      { group:'Input (Code)', files:[{src:'day2-input-1.png',label:'Day 2 - Input 1'},{src:'day2-input-2.png',label:'Day 2 - Input 2'},{src:'day2-input-3.png',label:'Day 2 - Input 3'}] },
+      { group:'Output (Browser)', files:[{src:'day2-output-1.png',label:'Day 2 - Output 1'},{src:'day2-output-2.png',label:'Day 2 - Output 2'},{src:'day2-output-3.png',label:'Day 2 - Output 3'}] }
+    ]
   },
   {
-    day:3, title:'Day 3 – Forms',
+    day:3,
+    title:'Day 3 - Forms',
     desc:'Understand how to collect user input using forms and different input elements.',
     sections:[
-      { label:'HTML Tags Covered', type:'tags', items:['&lt;form&gt;','&lt;input&gt;','&lt;label&gt;','&lt;textarea&gt;','&lt;select&gt;','&lt;option&gt;','&lt;button&gt;','&lt;fieldset&gt;','&lt;legend&gt;','&lt;datalist&gt;'] },
+      { label:'HTML Tags Covered', items:['form','input','label','textarea','select','option','button','fieldset','legend','datalist'] }
     ],
-    extra:`<div class="info-box">
-      <strong>📌 Extra Info:</strong><br/>
-      The <code>action</code> attribute in <code>&lt;form&gt;</code> specifies where to send the data; <code>method</code> is usually <code>GET</code> or <code>POST</code>. Input types include: <code>text</code>, <code>email</code>, <code>password</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, <code>date</code>, <code>range</code>, <code>color</code>, and more. Always pair <code>&lt;label&gt;</code> with inputs using the <code>for</code> attribute that matches the input's <code>id</code> — this improves accessibility. The <code>required</code>, <code>min</code>, <code>max</code>, and <code>pattern</code> attributes enable built-in HTML5 form validation without JavaScript.
-    </div>`
+    extra:'The action attribute in form specifies where to send data. Method is GET or POST. Input types include text, email, password, checkbox, radio, file, date, range, color. The required, min, max and pattern attributes enable built-in HTML5 validation.',
+    screenshots:[
+      { group:'Input (Code)', files:[{src:'day3-input-1.png',label:'Day 3 - Input 1'},{src:'day3-input-2.png',label:'Day 3 - Input 2'},{src:'day3-input-3.png',label:'Day 3 - Input 3'},{src:'day3-input-4.png',label:'Day 3 - Input 4'}] },
+      { group:'Output (Browser)', files:[{src:'day3-output.png',label:'Day 3 - Form Output'}] }
+    ]
   },
   {
-    day:4, title:'Day 4 – Layout + CSS Selectors',
+    day:4,
+    title:'Day 4 - Layout and CSS Selectors',
     desc:'Learn how to structure a webpage layout and apply styles using different CSS selectors.',
     sections:[
-      { label:'HTML Structural Tags', type:'tags', items:['&lt;header&gt;','&lt;nav&gt;','&lt;footer&gt;','&lt;section&gt;','&lt;article&gt;','&lt;aside&gt;','&lt;main&gt;','&lt;div&gt;','&lt;span&gt;'] },
-      { label:'CSS Selectors', type:'tags', items:['Element (p)','Class (.class)','ID (#id)','Universal (*)','Group (a, b)','Descendant (div p)','Child (div > p)','Pseudo-class (:hover)','Attribute ([type="text"])'] },
+      { label:'HTML Structural Tags', items:['header','nav','footer','section','article','aside','main','div','span'] },
+      { label:'CSS Selectors', items:['Element (p)','Class (.class)','ID (#id)','Universal (*)','Group (a,b)','Descendant (div p)','Child (div>p)','Pseudo-class (:hover)','Attribute ([type])'] }
     ],
-    extra:`<div class="info-box">
-      <strong>📌 Extra Info:</strong><br/>
-      Semantic layout tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code> improve both readability and SEO. CSS specificity determines which styles apply when multiple rules match: inline styles beat IDs, IDs beat classes, and classes beat element selectors. The <code>:root</code> pseudo-class lets you define global CSS custom properties (variables) with <code>--var-name</code> syntax. Pseudo-elements like <code>::before</code> and <code>::after</code> let you insert decorative content without extra HTML. Always link external CSS using <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> in the <code>&lt;head&gt;</code>.
-    </div>`
+    extra:'Semantic tags improve readability and SEO. CSS specificity: inline styles beat IDs, IDs beat classes, classes beat element selectors. Pseudo-elements like before and after insert decorative content without extra HTML.',
+    screenshots:[
+      { group:'Input (Code)', files:[{src:'day4-input-1.png',label:'Layout Input'},{src:'day4-input-2.png',label:'Class Selector'},{src:'day4-input-3.png',label:'ID Selector'},{src:'day4-input-4.png',label:'Group Selector'},{src:'day4-input-5.png',label:'Universal Selector'},{src:'day4-input-6.png',label:'Hover Selector'},{src:'day4-input-7.png',label:'Attribute Selector'},{src:'day4-input-8.png',label:'Pseudo-element'}] },
+      { group:'Output (Browser)', files:[{src:'day4-output-1.png',label:'Layout Output'},{src:'day4-output-2.png',label:'Class Output'},{src:'day4-output-3.png',label:'ID Output'},{src:'day4-output-4.png',label:'Group Output'},{src:'day4-output-5.png',label:'Universal Output'},{src:'day4-output-6.png',label:'Hover Output'},{src:'day4-output-7.png',label:'Attribute Output'},{src:'day4-output-8.png',label:'Pseudo-element Output'}] }
+    ]
   },
   {
-    day:5, title:'Day 5 – Box Model & Flexbox',
+    day:5,
+    title:'Day 5 - Box Model and Flexbox',
     desc:'Understand spacing, layout, and alignment using the CSS Box Model and Flexbox.',
     sections:[
-      { label:'Box Model Concepts', type:'tags', items:['Content','Padding','Border','Margin','box-sizing','width / height','outline'] },
-      { label:'Flexbox Properties', type:'tags', items:['display: flex','flex-direction','justify-content','align-items','align-self','flex-wrap','gap','flex-grow','flex-shrink','flex-basis'] },
+      { label:'Box Model Concepts', items:['Content','Padding','Border','Margin','box-sizing','width and height','outline'] },
+      { label:'Flexbox Properties', items:['display:flex','flex-direction','justify-content','align-items','align-self','flex-wrap','gap','flex-grow','flex-shrink','flex-basis'] }
     ],
-    extra:`<div class="info-box">
-      <strong>📌 Extra Info:</strong><br/>
-      By default, <code>width</code> only sets the content area. Using <code>box-sizing: border-box</code> includes padding and border in the element's total width — most developers apply this globally. Flexbox works on a one-dimensional axis; use <code>flex-direction: row</code> for horizontal and <code>column</code> for vertical layouts. <code>justify-content</code> controls the <em>main axis</em>; <code>align-items</code> controls the <em>cross axis</em>. Common tricks: <code>margin: auto</code> inside a flex container centers elements. Combining <code>flex-grow: 1</code> on a child fills remaining space.
-    </div>`
+    extra:'Using box-sizing border-box includes padding and border in total width. Flexbox is one-dimensional. justify-content controls the main axis and align-items controls the cross axis. margin auto inside a flex container centers elements.',
+    screenshots:[
+      { group:'Input (Code)', files:[{src:'day5-input-1.png',label:'Box Model Input 1'},{src:'day5-input-2.png',label:'Box Model Input 2'},{src:'day5-input-3.png',label:'Flexbox Input 1'},{src:'day5-input-4.png',label:'Flexbox Input 2'}] },
+      { group:'Output (Browser)', files:[{src:'day5-output-1.png',label:'Box Model Output'},{src:'day5-output-2.png',label:'Flexbox Output'}] }
+    ]
   },
   {
-    day:6, title:'Day 6 – JavaScript Basics',
+    day:6,
+    title:'Day 6 - JavaScript Basics',
     desc:'Start programming with JavaScript and learn basic operations and logic building.',
     sections:[
-      { label:'Core Concepts', type:'tags', items:['var / let / const','String, Number, Boolean','Null & Undefined','typeof','Template Literals','Array, Object'] },
-      { label:'Operators', type:'tags', items:['Arithmetic (+−×÷%)','Comparison (==, ===, !=)','Logical (&&, ||, !)','Assignment (=, +=)','Ternary (? :)'] },
-      { label:'Control Flow', type:'tags', items:['if / else if / else','switch','for loop','while loop','do...while','break / continue'] },
-      { label:'Functions', type:'tags', items:['function declaration','function expression','Arrow function (=>)','Parameters & arguments','return','Scope (local vs global)'] },
+      { label:'Core Concepts', items:['var / let / const','String Number Boolean','Null and Undefined','typeof','Template Literals','Array and Object'] },
+      { label:'Operators', items:['Arithmetic','Comparison (==, ===)','Logical (&&, ||, !)','Assignment','Ternary'] },
+      { label:'Control Flow', items:['if / else if / else','switch','for loop','while loop','do...while','break and continue'] },
+      { label:'Functions', items:['function declaration','function expression','Arrow function','Parameters and arguments','return','Scope'] }
     ],
-    extra:`<div class="info-box">
-      <strong>📌 Extra Info:</strong><br/>
-      Always prefer <code>let</code> and <code>const</code> over <code>var</code> — they are block-scoped and avoid common hoisting bugs. Use <code>===</code> (strict equality) instead of <code>==</code> to avoid type-coercion surprises. Arrow functions (<code>() => {}</code>) are shorter and don't bind their own <code>this</code>. The DOM (Document Object Model) lets JavaScript interact with HTML — use <code>document.getElementById()</code>, <code>querySelector()</code>, and <code>addEventListener()</code> to make pages dynamic. Console debugging with <code>console.log()</code> is your best friend while learning.
-    </div>`
+    extra:'Always prefer let and const over var. Use === strict equality. Arrow functions do not bind their own this. Use getElementById, querySelector and addEventListener to make pages dynamic.',
+    screenshots:[
+      { group:'Input and Output', files:[{src:'day6-input-output.png',label:'JS Operators - Code and Console Output'}] }
+    ]
   },
   {
-    day:7, title:'Day 7 – To-Do List Project',
+    day:7,
+    title:'Day 7 - To-Do List Project',
     desc:'Build a simple To-Do List application using HTML, CSS, and JavaScript to apply all concepts learned.',
     sections:[
-      { label:'Features to Build', type:'tags', items:['Add tasks','Delete tasks','Mark as completed','Filter (all/active/done)','Task counter','LocalStorage persistence','Responsive UI','Keyboard support (Enter key)'] },
+      { label:'Features to Build', items:['Add tasks','Delete tasks','Mark as completed','Filter tasks','Task counter','LocalStorage','Responsive UI','Keyboard support'] }
     ],
-    extra:`<div class="info-box">
-      <strong>📌 Project Tips:</strong><br/>
-      Structure your project into three files: <code>index.html</code>, <code>style.css</code>, and <code>script.js</code>. Use an <code>array</code> to store tasks as objects (<code>{ id, text, completed }</code>). Use <code>localStorage.setItem()</code> / <code>getItem()</code> to persist tasks on page refresh. Render tasks by looping through the array and injecting HTML using <code>innerHTML</code> or <code>createElement()</code>. Add CSS transitions on the checkbox to animate completions. This project touches every concept from Days 1–6 — a great portfolio piece!
-    </div>`
+    extra:'Structure project into index.html, style.css and script.js. Store tasks as objects with id, text and completed. Use localStorage to persist tasks. This project uses every concept from Days 1 to 6.',
+    screenshots:[
+      { group:'CSS Input (style.css)', files:[{src:'day7-css-input-1.png',label:'CSS Part 1'},{src:'day7-css-input-2.png',label:'CSS Part 2'},{src:'day7-css-input-3.png',label:'CSS Part 3'}] },
+      { group:'HTML Input (index.html)', files:[{src:'day7-html-input.png',label:'HTML Structure'}] },
+      { group:'HTML Output (Browser)', files:[{src:'day7-html-output.png',label:'To-Do App UI'}] },
+      { group:'JS Input and Output (script.js)', files:[{src:'day7-js-input-output.png',label:'JavaScript Logic'}] }
+    ]
   }
 ];
 
-/* ===== BUILD MODULE CARDS ===== */
-const grid = document.getElementById('modulesGrid');
-modules.forEach(m => {
-  const card = document.createElement('div');
-  card.className = 'module-card';
-  card.innerHTML = `
-    ${m.badge ? `<div class="module-badge">${m.badge}</div>` : ''}
-    <div class="module-icon">${m.icon}</div>
-    <div class="module-name">${m.name}</div>
-  `;
-  card.addEventListener('click', () => openModule(m));
-  grid.appendChild(card);
+/* SCREENSHOT RENDERER */
+function renderScreenshots(shots) {
+  if (!shots || shots.length === 0) return '';
+  var h = '<div class="screenshots-section"><span class="screenshots-label">📸 Screenshots</span>';
+  for (var g = 0; g < shots.length; g++) {
+    h += '<div class="screenshots-group"><span class="screenshots-group-title">' + shots[g].group + '</span><div class="screenshots-grid">';
+    for (var f = 0; f < shots[g].files.length; f++) {
+      var file = shots[g].files[f];
+      h += '<div class="screenshot-item" onclick="openLightbox(\'' + file.src + '\')">';
+      h += '<img src="' + file.src + '" alt="' + file.label + '" onerror="this.style.display=\'none\'"/>';
+      h += '<span>' + file.label + '</span></div>';
+    }
+    h += '</div></div>';
+  }
+  h += '</div>';
+  return h;
+}
+
+/* LIGHTBOX */
+function openLightbox(src) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lightboxImg').src = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
 });
 
-/* ===== MODULE OPEN / CLOSE ===== */
+/* BUILD MODULE CARDS */
+var grid = document.getElementById('modulesGrid');
+for (var mi = 0; mi < modules.length; mi++) {
+  (function(m) {
+    var card = document.createElement('div');
+    card.className = 'module-card';
+    var badgeHtml = m.badge ? '<div class="module-badge">' + m.badge + '</div>' : '';
+    card.innerHTML = badgeHtml + '<div class="module-icon">' + m.icon + '</div><div class="module-name">' + m.name + '</div>';
+    card.addEventListener('click', function() { openModule(m); });
+    grid.appendChild(card);
+  })(modules[mi]);
+}
+
+/* MODULE OPEN / CLOSE */
 function openModule(m) {
   document.getElementById('modulesGrid').style.display = 'none';
-  const detail = document.getElementById('moduleDetail');
   document.getElementById('detailTitle').textContent = m.icon + ' ' + m.name;
-  const content = document.getElementById('detailContent');
-  detail.classList.add('active');
+  var content = document.getElementById('detailContent');
+  document.getElementById('moduleDetail').classList.add('active');
 
   if (!m.hasDays) {
-    content.innerHTML = `<div class="coming-soon"><span>🛠️</span><p>Days for <strong>${m.name}</strong> will be added soon. Stay tuned!</p></div>`;
+    content.innerHTML = '<div class="coming-soon"><span>🛠️</span><p>Days for <strong>' + m.name + '</strong> will be added soon. Stay tuned!</p></div>';
     return;
   }
 
-  // Web Dev days
-  let html = `<div class="days-list">`;
-  webDays.forEach((d, i) => {
-    html += `<div class="day-row" id="dayRow${i}">
-      <div class="day-row-header" onclick="toggleDay(${i})">
-        <h4>📅 ${d.title}</h4>
-        <span class="day-arrow">▼</span>
-      </div>
-      <div class="day-content">
-        <h3>🌐 7-Day Web Development Learning Plan · ${d.title}</h3>
-        <p class="desc">${d.desc}</p>`;
-    d.sections.forEach(sec => {
-      html += `<p class="day-section-title">${sec.label}</p><div class="tag-list">`;
-      sec.items.forEach(it => { html += `<span class="tag">${it}</span>`; });
-      html += `</div>`;
-    });
-    html += d.extra;
-    html += `</div></div>`;
-  });
-  html += `</div>`;
+  var html = '<div class="days-list">';
+  for (var i = 0; i < webDays.length; i++) {
+    var d = webDays[i];
+    html += '<div class="day-row" id="dayRow' + i + '">';
+    html += '<div class="day-row-header" onclick="toggleDay(' + i + ')">';
+    html += '<h4>📅 ' + d.title + '</h4>';
+    html += '<span class="day-arrow">▼</span></div>';
+    html += '<div class="day-content">';
+    html += '<h3>🌐 7-Day Web Development Learning Plan - ' + d.title + '</h3>';
+    html += '<p class="desc">' + d.desc + '</p>';
+    for (var si = 0; si < d.sections.length; si++) {
+      var sec = d.sections[si];
+      html += '<p class="day-section-title">' + sec.label + '</p><div class="tag-list">';
+      for (var ti = 0; ti < sec.items.length; ti++) {
+        html += '<span class="tag">' + sec.items[ti] + '</span>';
+      }
+      html += '</div>';
+    }
+    html += '<div class="info-box"><strong>📌 Extra Info:</strong><br/>' + d.extra + '</div>';
+    html += renderScreenshots(d.screenshots);
+    html += '</div></div>';
+  }
+  html += '</div>';
   content.innerHTML = html;
 }
 
@@ -584,14 +653,8 @@ function closeModule() {
 }
 
 function toggleDay(i) {
-  const row = document.getElementById('dayRow' + i);
+  var row = document.getElementById('dayRow' + i);
   row.classList.toggle('open');
-}
-function openResume() {
-  document.getElementById('resumeFrame').src = 'resume.pdf';
-  document.getElementById('resumePlaceholder').style.display = 'none';
-  document.getElementById('resume-pdf-container').style.display = 'block';
-  document.getElementById('resumeDownload').style.display = 'inline-block';
 }
 </script>
 </body>
